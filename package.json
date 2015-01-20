@@ -7,5 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tyler Morgan <tyler@codefllows.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-simple-mocha": "^0.4.0"
+  }
 }
