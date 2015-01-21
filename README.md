@@ -5,7 +5,7 @@ Loosely based off the encrypted [token pattern by OWASP for preventing CSRF atta
 Tokens are encrypted using aes-256-ctr with a random IV and a password that's generated 
 using crypto.pbkdf2 from an app secret with a 32 byte random salt.
 
-```
+```javascript
 var eat = require('eat');
 
 eat.encode({id: user.id, timestamp: Time.now}, 'mysupersecret', function(err, token) {
@@ -13,7 +13,7 @@ eat.encode({id: user.id, timestamp: Time.now}, 'mysupersecret', function(err, to
   //send token
 });
 
-eat.decode(token, 'mysupersecre', function(err, token) {
+eat.decode(token, 'mysupersecret', function(err, token) {
   if (err) throw err;
   //check if token is expired and if the id corresponds to a valid user
 });
