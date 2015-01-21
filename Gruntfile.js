@@ -8,16 +8,16 @@ module.exports = function(grunt) {
   grunt.initConfig({
     jshint: {
       options: {
-        node: true 
+        node: true,
+        globals: {
+          describe: false,
+          it: false,
+          before: false
+        }
       },
       src: files
-    },
-
-    simplemocha: {
-      src: ['test/**/*test.js']
     }
   });
 
-  grunt.registerTask('test', ['jshint', 'simplemocha']);
-  grunt.registerTask('default', ['test']);
+  grunt.registerTask('default', ['jshint']);
 };
