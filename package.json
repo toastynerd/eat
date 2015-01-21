@@ -6,8 +6,19 @@
   "scripts": {
     "test": "node_modules/mocha/bin/mocha test/*.js"
   },
-  "author": "Tyler Morgan <tyler@codefllows.com>",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toastynerd/eat"
+  },
+  "licences": {
+    "type": "MIT",
+    "url": "https://raw.github.com/toastynerd/eat/master/LICENSE"
+  },
+  "author": "Tyler Morgan <tyler@codefellows.com>",
+  "homepage": "https://github.com/toastynerd/eat",
+  "bugs": {
+    "url": "https://github.com/toastynerd/eat/issues"
+  },
   "devDependencies": {
     "chai": "^1.10.0",
     "grunt": "^0.4.5",
