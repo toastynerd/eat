@@ -1,6 +1,7 @@
 Encrypted Authentication Tokens
 ======================
 ![travis build](https://travis-ci.org/toastynerd/eat.svg?branch=master)
+
 Tokens used for authentication purposes in a client/server app architecture.
 Loosely based off the [encrypted token pattern by OWASP for preventing CSRF attacks](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet).
 Tokens are encrypted using aes-256-ctr with a random IV and a password that's generated 
