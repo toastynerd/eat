@@ -1,1 +1,1 @@
-module.exports = require('./lib/csrft');
+module.exports = require('./lib/eat');
