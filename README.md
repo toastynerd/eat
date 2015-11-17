@@ -43,7 +43,7 @@ Either one of these functions will invalidate any token generated when
 using a different iv/salt. Another thing to keep in mind is that the
 iv/salt get regenerated everytime the server is reset. So, a server
 reset will invalidate all current tokens which might not be ideal for
-your use case. You can set the iv/salt paramemters of the eat object
+your use case. You can set the iv/salt parameters of the eat object
 although be careful as this can open you up to replay attacks. The salt
 can be length but the iv MUST be 32 bytes. Both must be contained in a buffer.
 ```javascript
