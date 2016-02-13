@@ -49,5 +49,5 @@ can be length but the iv MUST be 32 bytes. Both must be contained in a buffer.
 ```javascript
 var eat = require('eat');
 eat.salt = buffer.new('my new salt');
-eat.iv = buffer.new('a 32 byte string'); //this string isn't actullay 32 bytes
+eat.iv = buffer.new('a 32 byte string'); //this string isn't actually 32 bytes
 ```
