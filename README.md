@@ -23,7 +23,7 @@ eat.decode(token, 'mysupersecret', function(err, token) {
 
 The resulting token will be base64 encoded and can be passed to client to use for
 authentication against the server. The token should only be able to be encoded on the
-server. *This is not a substitute for using ssl/tls* it should be used in conjuction
+server. *This is not a substitute for using ssl/tls* it should be used in conjunction
 with a secure connection. If an attacker gets ahold of the token they will be able
 to authenticate as the user until the token is expired or you change the salt/iv.
 These functions can be called on eat as follows.
