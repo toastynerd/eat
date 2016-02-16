@@ -4,7 +4,7 @@ Encrypted Authentication Tokens
 
 Tokens used for authentication purposes in a client/server app architecture.
 Loosely based off the [encrypted token pattern by OWASP for preventing CSRF attacks](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet).
-Tokens are encrypted using aes-256-ctr with a random IV and a password that's generated 
+Tokens are encrypted using aes-256-ctr with a random IV and a password that's generated
 using crypto.pbkdf2 from an app secret with a 32 byte random salt.
 
 ```javascript
@@ -23,7 +23,7 @@ eat.decode(token, 'mysupersecret', function(err, token) {
 
 The resulting token will be base64 encoded and can be passed to client to use for
 authentication against the server. The token should only be able to be encoded on the
-server. *This is not a substitute for using ssl/tls* it should be used in conjuction
+server. *This is not a substitute for using ssl/tls* it should be used in conjunction
 with a secure connection. If an attacker gets ahold of the token they will be able
 to authenticate as the user until the token is expired or you change the salt/iv.
 These functions can be called on eat as follows.
@@ -34,7 +34,7 @@ if (server_compromised) {
     console.log('salt generated');
   });
 
-  eat.geniv(functon() {
+  eat.geniv(function() {
     console.log('iv generated');
   });
 }
@@ -49,5 +49,5 @@ can be length but the iv MUST be 32 bytes. Both must be contained in a buffer.
 ```javascript
 var eat = require('eat');
 eat.salt = buffer.new('my new salt');
-eat.iv = buffer.new('a 32 byte string'); //this string isn't actullay 32 bytes
+eat.iv = buffer.new('a 32 byte string'); //this string isn't actually 32 bytes
 ```
